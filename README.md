@@ -1,2 +1,0 @@
-# photomanagment
-Photo Management 

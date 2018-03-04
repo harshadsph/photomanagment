@@ -1,0 +1,16 @@
+.thumbnail img {
+    height:280px;
+    width: 100%;
+}
+img {
+ 
+    border: 1px solid rgba(221, 221, 221, 0); /* Gray border */
+    border-radius: 4px;  /* Rounded border */
+    padding: 5px; /* Some padding */
+}
+
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(238, 5, 5, 0.5);
+}
+
+

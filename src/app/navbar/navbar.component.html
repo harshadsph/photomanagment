@@ -1,0 +1,31 @@
+
+<form (ngSubmit)="searchForm()">
+
+<div class="form-group" >
+  <input type="text" id="dateRange" name="dateRange"  placeholder="Date..." class="form-control" bsDaterangepicker [(ngModel)] = "model.dateRange">
+</div>
+
+
+<div class="form-group">
+    <select id="salesCycle" name="salesCycle" class="form-control"
+    [(ngModel)] = "model.salesCycle" (change)="selectSalesCycleChangeHandler($event)">
+      <option value="-1">Please Select Sales Cycle</option>
+      <option *ngFor="let sales of navbarSalesCycleData" value= {{sales}}>{{sales}}</option>
+    </select>
+</div>
+
+<div class="form-group">
+    <select id="salesCampaign" name="salesCampaign" class="form-control" [(ngModel)] = "model.salesCampaign" (change)="selectSalesCampaignChangeHandler($event)" required>
+      <option value="-1">Please Select Sales Campaign</option>
+      <option *ngFor="let campaign of navbarSalesCampaignData" value= {{campaign}}>{{campaign}}</option>
+    </select>
+</div>
+
+<div class="form-group">
+  <button type="submit" class="btn-info form-control" >Search</button>
+</div>
+</form>
+
+<!-- <div class="jumbotron text-center">
+  <h4>{{navbarServerData}}}</h4>
+</div> -->
